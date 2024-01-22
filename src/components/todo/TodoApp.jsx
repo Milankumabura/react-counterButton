@@ -21,12 +21,18 @@ function LoginComponent() {
     }
 
     function handlePasswordChange(event) {
-        console.log(event.target.value)
         setPassword(event.target.value)
+    }
+
+    function handleSubmit() {
+        console.log(username)
+        console.log(password)
     }
 
     return(
         <div className='Login'>
+            <div className='successMessage'>Authenticated Successfully</div>
+            <div className='errorMessage'>Authentication Failed. Please check your credentials.</div>
             <div className="LoginForm">
                 <div>
                     <label>User Name:</label>
@@ -37,7 +43,7 @@ function LoginComponent() {
                     <input type='password' name='password' value={password} onChange={handlePasswordChange} />
                 </div>
                 <div>
-                    <button type="button" name='login'>login</button>
+                    <button type="button" name='login' onClick={handleSubmit}>login</button>
                 </div>
             </div>
         </div>
