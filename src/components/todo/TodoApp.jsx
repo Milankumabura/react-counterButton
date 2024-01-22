@@ -14,11 +14,17 @@ export default function TodoApp() {
 function LoginComponent() {
 
     const [username, setUsername] = useState('milan')
+    const [password, setPassword] = useState('')
 
     function handleUsernameChange(event) {
-        console.log(event.target.value)
         setUsername(event.target.value)
     }
+
+    function handlePasswordChange(event) {
+        console.log(event.target.value)
+        setPassword(event.target.value)
+    }
+
     return(
         <div className='Login'>
             <div className="LoginForm">
@@ -28,7 +34,7 @@ function LoginComponent() {
                 </div>
                 <div>
                     <label>Password:</label>
-                    <input type='password' name='password' />
+                    <input type='password' name='password' value={password} onChange={handlePasswordChange} />
                 </div>
                 <div>
                     <button type="button" name='login'>login</button>
