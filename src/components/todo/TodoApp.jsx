@@ -16,7 +16,8 @@ function LoginComponent() {
     const [username, setUsername] = useState('milan')
 
     function handleUsernameChange(event) {
-        console.log(event)
+        console.log(event.target.value)
+        setUsername(event.target.value)
     }
     return(
         <div className='Login'>
