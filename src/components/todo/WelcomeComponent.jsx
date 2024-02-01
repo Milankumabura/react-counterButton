@@ -10,16 +10,6 @@ function WelcomeComponent() {
     function callHelloWorldRestApi() {
         console.log("called")
         
-        // axios.get("http://localhost:8080/hello-world")
-        //     .then( (response) => successfulResponse(response) )
-        //     .catch( (error) => errorResponse(error) )
-        //     .finally( () => console.log("clean up"))
-
-        // retrieveHelloWorldBean()
-        //     .then( (response) => successfulResponse(response) )
-        //     .catch( (error) => errorResponse(error) )
-        //     .finally( () => console.log("clean up"))
-
         retrieveHelloPathVariable('Milan')
             .then( (response) => successfulResponse(response) )
             .catch( (error) => errorResponse(error) )
